@@ -17,6 +17,10 @@ From the directory, run:
 
     $ npm install -d
 
+Then ensure mongo server is running
+
+    $ ./mongod
+
 Finally:
 
     $ coffee server [optional port; default is 3000]
