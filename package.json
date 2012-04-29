@@ -1,5 +1,6 @@
 {
   "name": "nodejs-twitter",
+ 	"author": "Brendan Scarvell <bscarvell@gmail.com>",
   "version": "0.0.1",
   "private": true,
   "scripts": {
