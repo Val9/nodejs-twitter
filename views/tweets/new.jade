@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+	div(class="row")
+	
+		div(class="span9")
+			legend
+				h3 New Tweet
+			!{flash}
+			form(action="/tweets/new",class="form-horizontal",method="post")
+				div(class="control-group")
+					div(class="controls")
+						textarea(rows="5",class="span4", name="txtTweet")
+				div(class="control-group")
+					div(class="controls")
+							input(type="submit",class="btn btn-primary", value="Post Tweet") 

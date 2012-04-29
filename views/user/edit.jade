@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+	div(class="row")
+	
+		div(class="span9")
+			legend
+				h3 Account 
+					small General Settings
+			!{flash}
+			form(action="/account",class="form-horizontal",method="post")
+				div(class="control-group")
+					label(class="control-label") Username:
+					div(class="controls")
+						input(type="text",class="input", value="#{objUser.username}", name="txtUsername")
+				div(class="control-group")
+					label(class="control-label") Email:
+					div(class="controls")
+							input(type="text",class="input", value="#{objUser.email}", name="txtEmail")
+				div(class="control-group")
+					div(class="controls")
+							input(type="submit",class="btn btn-primary", value="Update") 

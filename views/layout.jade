@@ -1,0 +1,56 @@
+!!!
+html
+	head
+		title= title
+
+		meta(name="description", content="")
+		meta(name="author", content="")
+
+		// [if lt IE 9]
+			script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+		// [endif]
+
+		link(href="/stylesheets/bootstrap.min.css", rel="stylesheet")
+		link(href="/stylesheets/bootstrap-responsive.css", rel="stylesheet")
+		
+		script(src="/javascripts/jquery.js")
+		script(src="/javascripts/bootstrap.js")
+		style(type="text/css")
+			body {
+				padding-top: 60px;
+				padding-bottom: 40px;
+			}
+			.sidebar-nav {
+				padding: 9px 0;
+			}
+
+	body
+		div(class="navbar navbar-fixed-top")
+			div(class="navbar-inner")
+				div(class="container")
+					a(class="brand",href="../") #{title}
+					if session.authenticated == true
+						ul(class="nav pull-right")
+							li(class="dropdown")
+								a(href="#",class="dropdown-toggle",data-toggle="dropdown")
+									i(class="icon-user icon-white")
+									| #{objUser.username}
+									b(class="caret")
+								ul(class="dropdown-menu")
+									li
+										a(href="/account")
+											i(class="icon-pencil") 
+											|  Edit
+									li(class="divider")
+									li
+										a(href="/logout")
+											i(class="icon-lock")
+											|  Logout
+						
+		div(class="container")
+				div(class="row")
+						div(class="span9 offset1")
+							block content			
+	hr
+	footer
+		p &copy; Developed by Brendan Scarvell 2012 | Built with Bootstrap

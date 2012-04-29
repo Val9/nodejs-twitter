@@ -1,0 +1,27 @@
+extends layout
+
+block content
+	!{flash}	
+	div(class="row")
+		div(class="span4 well")
+			legend
+				h3 New User?
+					small  Sign up
+					p
+						form(action="/signup", method="post")
+							input(type="text", placeholder="Username", name="txtUsername")
+							br
+							input(type="text", placeholder="Email", name="txtEmail")
+							br
+							input(type="text", placeholder="Password", name="txtPassword")
+							br
+							input(type="submit", value="Sign up to #{title}", class="btn btn-primary")
+		div(class="span4 well")
+			h3 Login
+				p
+					form(action="/login", method="post")
+						input(type="text", placeholder="Email", name="txtEmail")
+						br
+						input(type="password", placeholder="Password", name="txtPassword")
+						br
+						input(type="submit", value="Login", class="btn btn-primary")

@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+	!{flash}
+	div(class="row")
+		div(class="span9")
+			legend Tweets
+		form(action="/tweets/new",method="post")
+			textarea(class="span6",id="tweet")
+			input(type="submit",name="cmdPost",value="post tweet",class="btn btn-primary",style="btn btn-primary")
+		hr

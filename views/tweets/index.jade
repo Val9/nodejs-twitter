@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+	div(class="row")
+	
+		div(class="span9")
+			legend
+				h3 Tweets 
+			!{flash}
+			p
+				small
+					a(href="/tweets/new") New Tweet
+			br
+			if tweets == 0
+				p No tweets posted yet
+			else
+				for tweet in tweets
+					p
+						p= tweet.tweet
+						small
+							a(href="/#{tweet.author}") #{tweet.author} 
+							if tweet.author === objUser.username
+								|  - 
+								a(href="/tweets/delete/#{tweet.id}") delete

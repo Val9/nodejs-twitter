@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+	!{flash}
+	div(class="row")
+		div(class="span9")
+			legend
+				h3= profile.username
+			if tweets == ''
+				p #{profile.username} hasn't posted any tweets
+			else
+				for tweet in tweets
+					p= tweet.tweet
+					hr
