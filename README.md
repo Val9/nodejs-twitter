@@ -1,6 +1,6 @@
 ## nodejs-twitter
 
-nodejs-twitter is an example of how you can create a basic Twitter like website.
+nodejs-twitter is an example of how you can create a basic Twitter engine.
 
 
 ### Features
